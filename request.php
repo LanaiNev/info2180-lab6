@@ -14,20 +14,23 @@ $definition = [
     "php" => "A server-side scripting language, and a powerful tool for making dynamic and interactive websites",
 ];
 
-
-echo "<ol>";
-    foreach ($definition as $key => $val) {
-         
-         echo '<pre>'; 
-         echo "<li>";
-         echo "<h3>" . $key . "</h3>";
-         
-         echo "<p>" . $val . "</p>";
-         echo '</pre>';
-         echo "</li>";
-         
+if ($all != true){
+    print "<h3>" . strtoupper($query) . "</h3>";
+    print "<p>" . $definition[$query] . "</p>";
+}
+else{
+    echo "<ol>";
+        foreach ($definition as $key => $val) {
+             
+             echo '<pre>'; 
+             echo "<li>";
+             echo "<h3>" . $key . "</h3>";
+             
+             echo "<p>" . $val . "</p>";
+             echo '</pre>';
+             echo "</li>";
+             
     }
-echo "</ol>";
 
-print "<h3>" . strtoupper($query) . "</h3>";
-print "<p>" . $definition[$query] . "</p>";
+    echo "</ol>";
+}
